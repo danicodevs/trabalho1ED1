@@ -85,7 +85,6 @@ int main() {
             } else {
                 printf("Valor invalido.\n");
             }
-            
             break;
         }
         case 8: {

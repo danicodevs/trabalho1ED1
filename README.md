@@ -1,6 +1,6 @@
 # Sistema de Gerenciamento de Humor Diário
 Trabalho Prático 1 - Estruturas de Dados I   
-
+Link repositório: [https://github.com/danicodevs/trabalho1ED1](https://github.com/danicodevs/trabalho1ED1)
 ## 📁 Estrutura do Projeto
 
 ### Arquivos Principais:
@@ -37,8 +37,9 @@ Trabalho Prático 1 - Estruturas de Dados I
 
 
 ## 📝 Instruções de uso
+
 ### 1. Abra seu terminal e entre nessa pasta ./Daniel-de-Paula-Cardoso-Duplamente-Encadeado/
-### 2. execute o comando ```make```, o programa será compilado e executado automaticamente.
+### 2. Execute o comando ```make```, o programa será compilado e executado automaticamente.
 
 ## 🚀 Mais projetos em
 <div align="left" style="margin-top: 20px;">
