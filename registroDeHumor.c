@@ -62,7 +62,7 @@ void imprimirRegistro(const RegistroDeHumor* registro) {
             break;
         }
         printf("Motivo: %s\n", registro -> motivo);
-        printf("Nota do dia: %d\n", registro ->notaDoDia);
+        printf("Nota do dia: %d\n", registro -> notaDoDia);
     }
     
 }

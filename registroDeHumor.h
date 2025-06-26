@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifndef REGISTRO_DE_HUMOR_H
+#define REGISTRO_DE_HUMOR_H
+
 typedef enum {FELIZ, TRISTE, ANSIOSO, CANSADO, MOTIVADO, ESTRESSADO, NEUTRO} Humor;
 
 typedef struct registroDeHumor
@@ -19,3 +22,5 @@ RegistroDeHumor*criarRegistro(const char data[11],Humor humor, const char motivo
 void imprimirRegistro(const RegistroDeHumor* registro);
 
 void liberarRegistro(RegistroDeHumor* registro);
+
+#endif
