@@ -27,6 +27,12 @@ RegistroDeHumor*criarRegistro(const char data[11],Humor humor, const char motivo
     return novo;
 }
 
+void atualizarUltimoId(int novoId) {
+    if (novoId > ultimo_id) {
+        ultimo_id = novoId;
+    }
+}
+
 void imprimirRegistro(const RegistroDeHumor* registro) {
     if(registro == NULL) {
         printf("Registro inválido.\n");

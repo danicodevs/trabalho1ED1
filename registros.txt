@@ -1,0 +1,4 @@
+1;22/12/2005;0;Nasci;10
+2;14/08/2025;2;provas e fim de semestre;5
+3;10/08/2025;3;provas e fim de semestre;7
+4;03/08/2025;6;provas e fim de semestre;8

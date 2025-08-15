@@ -9,6 +9,7 @@ int main() {
     criarLista(&lista);
     int opcao, id, x;
     Humor humor;
+    carregarDoArquivo(&lista, "registros.txt");
 
     do {
         printf("\n---MENU---\n");
@@ -89,6 +90,7 @@ int main() {
         }
         case 8: {
             printf("Saindo...\n");
+            salvarEmArquivo(lista, "registros.txt");
             liberarLista(&lista);
             break;
         }

@@ -192,3 +192,43 @@ void mostrarMotivosPorHumor(NoLista** l, Humor x) {
     printf("Nao ha registros com esse humor. \n");
   }
 }
+
+void salvarEmArquivo(NoLista* lista, const char* nomeArquivo) {
+    FILE* fp = fopen(nomeArquivo, "w");
+    if (!fp) {
+        printf("Erro ao abrir arquivo para escrita.\n");
+        return;
+    }
+    for (NoLista* p = lista; p != NULL; p = p->prox) {
+        fprintf(fp, "%d;%s;%d;%s;%d\n",
+            p->tad.id,
+            p->tad.data,
+            p->tad.humor,
+            p->tad.motivo,
+            p->tad.notaDoDia);
+    }
+    fclose(fp);
+}
+
+void carregarDoArquivo(NoLista** lista, const char* nomeArquivo) {
+    FILE* fp = fopen(nomeArquivo, "r");
+    if (!fp) {
+        // Se não existir, apenas ignora
+        return;
+    }
+    char linha[256];
+    while (fgets(linha, sizeof(linha), fp)) {
+        RegistroDeHumor reg;
+        char humorStr[10], motivo[100];
+        if (sscanf(linha, "%d;%10[^;];%d;%99[^;];%d",
+                   &reg.id,
+                   reg.data,
+                   (int*)&reg.humor,
+                   reg.motivo,
+                   &reg.notaDoDia) == 5) {
+            atualizarUltimoId(reg.id);
+            inserirNoFim(lista, &reg);
+        }
+    }
+    fclose(fp);
+}

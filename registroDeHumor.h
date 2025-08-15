@@ -23,4 +23,6 @@ void imprimirRegistro(const RegistroDeHumor* registro);
 
 void liberarRegistro(RegistroDeHumor* registro);
 
+void atualizarUltimoId(int novoId);
+
 #endif

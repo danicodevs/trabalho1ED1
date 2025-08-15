@@ -36,4 +36,8 @@ void humorMaisFrequente(NoLista** l, int x);
 
 void mostrarMotivosPorHumor(NoLista** l, Humor x);
 
+void salvarEmArquivo(NoLista* lista, const char* nomeArquivo);
+
+void carregarDoArquivo(NoLista** lista, const char* nomeArquivo);
+
 #endif
